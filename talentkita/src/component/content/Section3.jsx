@@ -5,7 +5,7 @@ const Section3 = () => {
     <div className="w-full bg-blue-100">
       <div className="container py-6 max-w-4xl mx-auto">
         <div className="flex justify-center items-center py-6">
-          <div className="w-full font-bold text-3xl">
+          <div className="w-full font-bold text-3xl mr-10">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
           </div>

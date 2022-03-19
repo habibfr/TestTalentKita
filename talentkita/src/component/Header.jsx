@@ -47,16 +47,7 @@ const Header = () => {
             <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               <li>
                 <a
-                  href="#"
-                  class="block py-2 pr-4 pl-3 text-white hover:text-black rounded md:bg-transparent md:text-white md:p-0"
-                  aria-current="page"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
+                  href="#about"
                   class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 "
                 >
                   About
@@ -64,7 +55,7 @@ const Header = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#services"
                   class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 "
                 >
                   Services
@@ -72,7 +63,7 @@ const Header = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#pricing"
                   class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0"
                 >
                   Pricing
@@ -80,7 +71,7 @@ const Header = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#contact"
                   class="block py-2 pr-4 pl-3  hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white hover:bg-transparent"
                 >
                   Contact
