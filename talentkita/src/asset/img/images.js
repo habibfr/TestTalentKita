@@ -1,4 +1,5 @@
 import scene from "./Scenes03.svg";
+import scene1 from "./Scenes01.svg";
 import iklan1 from "./asus.png";
 import iklan2 from "./amazon.png";
 import iklan3 from "./adidas.png";
@@ -11,4 +12,5 @@ export default {
   iklan2,
   iklan3,
   comp,
+  scene1
 };
