@@ -8,12 +8,12 @@ const dataCards = [
     image: "https://source.unsplash.com/750x500/?game",
   },
   {
-    title: "Digital Marketing",
+    title: "Digital Market",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit Voluptatibus quia, nulla! Maiores et.",
     image: "https://source.unsplash.com/750x500/?beach",
   },
   {
-    title: "Digital Marketing",
+    title: " Marketing",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit Voluptatibus quia, nulla! Maiores et.",
     image: "https://source.unsplash.com/750x500/?teknologi",
   },
@@ -21,11 +21,11 @@ const dataCards = [
 
 const Services = () => {
   const Cards = dataCards.map((card) => {
-    return <Card title={card.title} image={card.image} desc={card.desc} />;
+    return <Card classImg="rounded-lg" key={card.title} title={card.title} image={card.image} desc={card.desc} />;
   });
 
   return (
-    <div className="w-full py-8 bg-gray-200" id="services">
+    <div className="w-full py-8 bg-gray-100" id="services">
       <div className="max-w-4xl py-6 container mx-auto ">
         <div>
           <h1 className="font-bold text-4xl w-1/2">
