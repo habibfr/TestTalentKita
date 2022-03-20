@@ -14,11 +14,11 @@ const About = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standar
             </p>
-            <div className="py-6">
-              <button className="px-10 py-2 mr-5 bg-orange-500 rounded-full">
-                Sign Up
+            <div className="py-6 ">
+              <button className="px-10 py-2 mr-5 bg-orange-400 transition-all duration-500 ease-in text-white font-medium rounded-full hover:bg-transparent hover:text-black">
+                Sign In
               </button>
-              <button className="px-10 py-[0.4rem] border-2 border-orange-500 rounded-full">
+              <button className="px-10 py-[0.4rem] border-2 border-orange-400 transition-all duration-700 ease-out font-medium rounded-full hover:bg-orange-400 hover:text-white">
                 Sign Up
               </button>
             </div>
