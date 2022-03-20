@@ -25,11 +25,12 @@ const Footer = () => {
           <div className="font-medium text-lg mb-4">Join Newsletter</div>
           <div>
             <input
+              type="email"
               placeholder="type email here"
-              className="bg-white py-2 px-6 rounded-full outline-none text-gray-800"
+              className="bg-white py-2 px-6 rounded-full outline-none text-gray-600"
             />
           </div>
-          <button className="py-2 px-6 my-4 rounded-full bg-orange-500">
+          <button className="py-2 px-6 my-4 transition-all duration-500 ease-linear rounded-full bg-orange-500 hover:bg-orange-800">
             Subscribe
           </button>
         </div>
@@ -38,7 +39,8 @@ const Footer = () => {
       <div className="max-w-4xl mx-auto mt-8 flex justify-between items-center text-white font-medium">
         <div>©All Rights Reserved</div>
         <div className="">
-          <span>Privacy Police</span>{" "} <span className="ml-8">Terms & Condition</span>{" "}
+          <span>Privacy Police</span>{" "}
+          <span className="ml-8">Terms & Condition</span>{" "}
         </div>
       </div>
     </div>
