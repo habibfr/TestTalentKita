@@ -18,7 +18,7 @@ const dataCard = [
 const Section4 = () => {
   const cards = dataCard.map((card) => {
     return (
-      <div key={card.title} className=" max-w-[15rem] shadow-lg rounded-lg p-4">
+      <div key={card.title} className="max-w-[15rem] shadow-lg rounded-lg p-4">
         <div className="font-bold text-2xl text-orange-600">{card.total}+</div>
         <div className="">
           <div className="font-bold text-lg cursor-pointer">{card.title}</div>
