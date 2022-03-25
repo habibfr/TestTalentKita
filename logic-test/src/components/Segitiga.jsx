@@ -20,7 +20,6 @@ const Segitiga = () => {
     setInputSudut(sudutValue);
 
     setIsValid((inputSudut == 45 || 135 || 225 || 315) && inputPanjang <= 12);
-
   };
 
   const submitHandler = (event) => {
@@ -35,7 +34,7 @@ const Segitiga = () => {
       if (derajat == 45) {
         for (let i = panjang; i > 0; i--) {
           for (let j = 0; j < i; j++) {
-            hasil.push(<span className="text-3xl mr-3 font-bold "> * </span>);
+            hasil.push(<span className="text-xl mr-3 font-bold "> * </span>);
           }
           hasil.push(<br></br>);
         }
@@ -43,10 +42,10 @@ const Segitiga = () => {
         for (let i = panjang; i > 0; i--) {
           for (let j = panjang; j >= 0; j--) {
             if (j < i) {
-              hasil.push(<span className="text-3xl mr-3 font-bold ">* </span>);
+              hasil.push(<span className="text-xl mr-3 font-bold "> * </span>);
             } else if (j > i) {
               hasil.push(
-                <span className="text-3xl mr-3 font-bold text-transparent">
+                <span className="text-xl mr-3 font-bold text-transparent">
                   *{" "}
                 </span>
               );
@@ -59,12 +58,12 @@ const Segitiga = () => {
           for (let j = 1; j <= panjang; j++) {
             if (j < i) {
               hasil.push(
-                <span className="text-3xl mr-3 font-bold text-transparent">
+                <span className="text-xl mr-3 font-bold text-transparent">
                   *{" "}
                 </span>
               );
             } else if (j >= i) {
-              hasil.push(<span className="text-3xl mr-3 font-bold ">* </span>);
+              hasil.push(<span className="text-xl mr-3 font-bold "> * </span>);
             }
           }
           hasil.push(<br></br>);
@@ -72,14 +71,13 @@ const Segitiga = () => {
       } else if (derajat == 135) {
         for (let i = panjang; i > 0; i--) {
           for (let j = i; j <= panjang; j++) {
-            hasil.push(<span className="text-3xl mr-3 font-bold">* </span>);
+            hasil.push(<span className="text-xl mr-3 font-bold">* </span>);
           }
           hasil.push(<br></br>);
         }
       } else {
         hasil.push(<div>Maaf anda salah memasukan nomor</div>);
       }
-
       return hasil;
     } else {
       return hasil;
@@ -133,11 +131,15 @@ const Segitiga = () => {
                 Submit
               </button>
             </div>
-            {isValid ? (
-              createSegitiga(inputSudut, inputPanjang)
-            ) : (
-              <div className="text-red-600 font-medium">Maaf anda salah memasukan angka [Max 12]</div>
-            )}
+            <div className="max-w-md">
+              {isValid ? (
+                createSegitiga(inputSudut, inputPanjang)
+              ) : (
+                <div className="text-red-600 font-medium">
+                  Maaf anda salah memasukan angka [Max 12]
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
