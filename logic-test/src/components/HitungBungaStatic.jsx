@@ -50,7 +50,7 @@ const HitungBungaStatic = () => {
     <>
       <div className="bg-purple-600 mx-auto max-w-3xl py-8">
         <div className="font-bold text-3xl text-center text-white py-4">
-          Hitung Bunga Statis
+          Hitung Bunga Statis 6 Bulan
         </div>
         <div className="flex justify-center items-center py-4 px-8">
           <div className="w-full text-white">
@@ -82,13 +82,17 @@ const HitungBungaStatic = () => {
               {isValid ? (
                 <div>
                   {hasil(value)}
-                  <div className="mt-6 text-teal-600">Hasil Akan di Hapus Setiap 10 Detik.</div>
+                  <div className="mt-6 text-teal-600">
+                    Hasil Akan di Hapus Setiap 10 Detik.
+                  </div>
                 </div>
               ) : (
-                <div className="text-red-600">Masukan Angka yang Benar [Min : 100000].</div>
+                <div className="text-red-600">
+                  Masukan Angka yang Benar [Min : 100000].
+                </div>
               )}
-
             </div>
+            <div className="text-xs text-gray-300">*Bunga 0.2% perbulan</div>
           </div>
         </div>
       </div>
