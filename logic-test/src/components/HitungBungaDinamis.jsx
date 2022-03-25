@@ -3,30 +3,32 @@ import React, { useState } from "react";
 const HitungBungaDinamis = () => {
   const [isValid, setIsValid] = useState(false);
   const [value, setValue] = useState("");
+  const [valueIsValid, setValueIsValid] = useState();
   const [bulanEntered, setBulanEntered] = useState("");
+  const [bulanIsValid, setBulanIsValid] = useState();
 
   const submitHandler = (event) => {
     event.preventDefault();
-    if (value >= 100000 && bulanEntered > 0 && bulanEntered <= 12) {
-      setTimeout(() => {
-        setIsValid(false);
-        setValue("");
-        setBulanEntered("");
-      }, 10000);
-      setIsValid(true);
-    }
+
+    setTimeout(() => {
+      setIsValid(false);
+      setBulanEntered("");
+      setValue("");
+    }, 10000);
+    setIsValid(valueIsValid && bulanIsValid);
   };
 
   const inputChangeHandler = (event) => {
     const value = Number(event.target.value);
-
     setValue(value);
+    setValueIsValid(value >= 100000);
   };
 
   const bulanChangeHandler = (event) => {
     const value = Number(event.target.value);
 
     setBulanEntered(value);
+    setBulanIsValid(value > 0 && value <= 12);
   };
 
   const hasil = (x, y) => {
@@ -113,6 +115,7 @@ const HitungBungaDinamis = () => {
                 </div>
               )}
             </div>
+            <div className="text-xs text-gray-300">*Bunga 0.2% perbulan</div>
           </div>
         </div>
       </div>
