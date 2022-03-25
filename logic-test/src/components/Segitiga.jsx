@@ -4,8 +4,6 @@ const Segitiga = () => {
   const [inputPanjang, setInputPanjang] = useState(1);
   const [inputSudut, setInputSudut] = useState(45);
   const [isValid, setIsValid] = useState(false);
-  const [panjangIsValid, setPanjangIsValid] = useState(false);
-  const [sudutIsValid, setSudutIsValid] = useState(true);
 
   const inputPanjangHandler = (event) => {
     console.log(event.target.value);
@@ -13,9 +11,6 @@ const Segitiga = () => {
     const valuePanjang = event.target.value;
     setInputPanjang(valuePanjang);
 
-    // if (inputPanjang >= 3 && inputPanjang <= 12) {
-    //   setPanjangIsValid(true);
-    // }
     setIsValid((inputSudut == 45 || 135 || 225 || 315) && inputPanjang <= 12);
   };
 
@@ -26,40 +21,12 @@ const Segitiga = () => {
 
     setIsValid((inputSudut == 45 || 135 || 225 || 315) && inputPanjang <= 12);
 
-    // if (inputSudut == 45 || 135 || 225 || 315) {
-    //   setSudutIsValid(true);
-    // }
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
     setIsValid((inputSudut == 45 || 135 || 225 || 315) && inputPanjang <= 12);
-
-    // if ((inputPanjang < 12 && inputSudut == 45) || 135 || 225 || 315) {
-    //   setIsValid(true);
-    // } else {
-    //   setIsValid(false);
-    // }
-
-    console.log("click");
-
-    // setInputPanjang();
-    // setInputSudut();
   };
-
-  // useEffect(() => {
-  //   const identifier = setTimeout(() => {
-  //     console.log("checking for validaty");
-  //     setIsValid(panjangIsValid, sudutIsValid);
-  //   }, 500);
-
-  //   return () => {
-  //     console.log("Clean up");
-  //     clearTimeout(identifier);
-  //   };
-  // }, [panjangIsValid, sudutIsValid]);
-
-  console.log(isValid, sudutIsValid, panjangIsValid);
 
   const createSegitiga = (derajat, panjang) => {
     let hasil = [];
@@ -130,7 +97,7 @@ const Segitiga = () => {
             <div className="flex justify-between items-center gap-4">
               <div className="w-full">
                 <label className="block mb-2 py-2 text-sm font-medium">
-                  Masukan Uang :
+                  Masukan Panjang * :
                 </label>
                 <input
                   value={inputPanjang}
@@ -143,7 +110,7 @@ const Segitiga = () => {
               </div>
               <div className="w-2/5">
                 <label className="block py-2 mb-2 text-sm font-medium">
-                  Bulan :
+                  Sudut :
                 </label>
                 <select
                   onChange={inputSudutHandler}
@@ -169,8 +136,8 @@ const Segitiga = () => {
             {isValid ? (
               createSegitiga(inputSudut, inputPanjang)
             ) : (
-              <div>salah</div>
-            )}
+              <div className="text-red-600 font-medium">Maaf anda salah memasukan angka [Max 12]</div>
+            )}s
           </div>
         </div>
       </div>
