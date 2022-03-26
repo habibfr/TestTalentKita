@@ -43,7 +43,7 @@ const Calculator = () => {
       <div className=" justify-center items-center py-4 px-8 text-white">
         <div className="w-full">
           <label className="block mb-2 py-2 text-sm font-medium">
-            Masukan Angka 1 :
+            Masukan Angka :
           </label>
           <input
             value={firstValue}
@@ -55,12 +55,12 @@ const Calculator = () => {
 
         <div className="w-full pt-4">
           <label className="block mb-2 py-2 text-sm font-medium">
-            Masukan Angka 2 :
+            Masukan Angka :
           </label>
           <input
             value={secondValue}
             onChange={secondValueHandler}
-            // type="number"
+            type="number"
             className="p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 outline-teal-500 "
           />
         </div>
