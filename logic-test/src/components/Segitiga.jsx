@@ -136,7 +136,7 @@ const Segitiga = () => {
                 createSegitiga(inputSudut, inputPanjang)
               ) : (
                 <div className="text-red-600 font-medium">
-                  Maaf anda salah memasukan angka [Max 12]
+                  Maaf anda salah memasukan angka [Min 4 & Max 12]
                 </div>
               )}
             </div>
