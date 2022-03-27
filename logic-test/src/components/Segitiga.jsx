@@ -6,7 +6,6 @@ const Segitiga = () => {
   const [isValid, setIsValid] = useState(false);
 
   const inputPanjangHandler = (event) => {
-    console.log(event.target.value);
 
     const valuePanjang = event.target.value;
     setInputPanjang(valuePanjang);
@@ -15,7 +14,6 @@ const Segitiga = () => {
   };
 
   const inputSudutHandler = (event) => {
-    console.log(event.target.value);
     const sudutValue = event.target.value;
     setInputSudut(sudutValue);
 
