@@ -40,7 +40,7 @@ const Calculator = () => {
       <div className="font-bold text-3xl text-center text-white py-4">
         Calculator
       </div>
-      <div className=" justify-center items-center py-4 px-8 text-white">
+      <div className="justify-center items-center py-4 px-8 text-white">
         <div className="w-full">
           <label className="block mb-2 py-2 text-sm font-medium">
             Masukan Angka :
